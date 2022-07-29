@@ -1,4 +1,4 @@
-package GammaInteger;
+package GammaCalculator;
 
 import java.util.Scanner;
 
@@ -18,8 +18,9 @@ public class GammaFunction
 		if(checkWholeNumber(x))
 			return fact(x-1);
 		x = x - 1;
-		return squareRoot(2*PIE_VALUE*x) * power((x/E_VALUE), x);
-	}
+		return squareRoot(2 * PIE_VALUE * x) * power((x/E_VALUE), x);
+	}	
+	
 	
 	/**
 	 * Implementation of square root 
@@ -166,7 +167,7 @@ public class GammaFunction
 			System.out.println("Enter the value of n (n>0) : ");
 			n = sc.nextDouble();
 			
-			if(n == 0 || n < 0) {
+			if(n == 0 || n < 0 || n > 171) {
 				System.out.println("Infinty");
 				continue;
 			}
