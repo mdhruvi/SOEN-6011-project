@@ -76,6 +76,8 @@ class gammaFunctionTest {
 		double db = gammaFunction.stirlingFormula(21.14);
 		assertEquals(3.699869886541974E18, db);
     }
+	
+	
 
     /**
 	 * This function tests the positive limit for Gamma function.

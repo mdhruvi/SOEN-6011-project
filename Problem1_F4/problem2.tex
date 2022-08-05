@@ -1,0 +1,122 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage} % changes the margin
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\usepackage{booktabs} % For formal tables
+
+\usepackage[ruled]{algorithm2e} % For algorithms
+\renewcommand{\algorithmcfname}{ALGORITHM}
+
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+\large\textbf{PROBLEM 2.} \hfill \textbf{Dhruviben Modi} \\
+\normalsize SOEN 6011 \hfill \textbf{40166396} \\
+ SOFTWARE ENGINEERING PROCESSES \hfill Due Date: August 5, 2022 \\
+\hfill Github address : git@github.com:mdhruvi/SOEN-6011-project.git
+
+\section{Explicit Assumption}
+\begin{itemize}
+     \item[1.]n is positive real number $n \in R^{+}$
+     \item[2.]For n $\in Z^+$, it is easier to compute $\Gamma(n)$
+\end{itemize}
+\section{Requirements and corresponding properties}
+\indent \textbf{F4 - $\Gamma \left( x \right)$} \\ \\
+\indent (1) First Requirement : The Gamma Function $\Gamma(x)$ requires x as its variable input in order to proceed.
+
+\begin{itemize}
+    \item ID : FR1
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: x
+    \item Difficulty: Easy.
+    \item Type: Functional requirement
+\end{itemize}
+
+(2) Second Requirement : If the user provides a legitimate input in domain of $R^+$, the Gamma function's output must be exact and correct.
+
+\begin{itemize}
+    \item ID : FR2
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: $x > 0$, The fundamental goal of the calculating system is to provide an accurate answer quickly, hence this criteria is essential.
+    \item Difficulty: Difficult, selection of correct algorithm.
+    \item Type: Functional requirement
+\end{itemize}
+
+(3) Third Requirement : When the user entered the parameter x, Gamma calculator will check the value of a parameter. If the entered value is zero or negative it displays the error message. If the parameter is in form of String then exception is thrown with an error message.
+
+\begin{itemize}
+    \item ID : FR3
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: For the gamma function, 0 and all the negative integers are not defined. For example ${\displaystyle \Gamma (0)=\int _{0}^{\infty }x^{-1}e^{-x}\,dx}$. It is not integrable. For small value of x, it appears to decay slowly, but for large values, it decays quite quickly. Non-Integral form is: \\\\
+     $\lim_{a \to 0}\int _{a}^{1}x^{-1}e^{-x}dx \geq \frac{1}{e}\lim_{a \to 0}\int _{a}^{1} \frac{dx}{x}=\lim_{a \to 0}-log_a=\infty$ \\\\
+    Thus $\Gamma \left( 0 \right)$ is undefined, and hence it is also undefined for all the negative integers.
+    \item Difficulty: Easy
+    \item Type: Functional requirement
+\end{itemize}
+
+(4) Fourth Requirement : To avoid a stack overflow, the gamma function can be calculated if the inputs are positive integers using the tail recursion function.
+
+\begin{itemize}
+    \item ID : FR4
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: \{ $\forall n \in R^+$ $\mid\;$  $\Gamma(n)$ = $(n-1)! $ \}
+    \item Difficulty: Moderate
+    \item Type: Functional Requirements
+\end{itemize}
+
+(5) Fifth Requirement : The output of the gamma function can be computed for the fractional value of the input parameter using Stirling's approximation for performing definite integration.
+
+\begin{itemize}
+    \item ID : FR5
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: \{ $\forall n \in R^{+}$ $\mid\;$y $\Gamma n = \sqrt{2 \cdot \pi \cdot n}\cdot (\frac{n}{e})^{n}$ \}
+    \item Difficulty: Difficult
+    \item Type: Functional Requirements
+\end{itemize}
+
+(6) Sixth Requirement : The system must be maintainable and managable to achieve usability.
+
+\begin{itemize}
+    \item ID : NFR1
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: To make a system well-organized it is essential that each modules must be implemented separately, otherwise it is difficult to manage such complex system.
+    \item Difficulty: Moderate
+    \item Type: Non-Functional Requirement
+\end{itemize}
+
+(7) Seventh Requirement : The system portability.
+
+\begin{itemize}
+    \item ID : NFR2
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: Java's architectural neutral features give the system the flexibility to function on many system architectures.
+    \item Difficulty: Moderate
+    \item Type: Non-Functional Requirement
+\end{itemize}
+
+(8) Eighth Requirement : The system Usability.
+
+\begin{itemize}
+    \item ID : NFR3
+    \item Version number: 1.0
+    \item Priority: High
+    \item Rationale: Any user should be able to easily comprehend the system. For a novice user, error messages must be helpful.
+    \item Difficulty: Easy
+    \item Type: Non-Functional Requirement
+\end{itemize}
+
+
+\section{References}
+
+\setlength{\parindent}{1em}
+29148-2018 --- ISO/IEC/IEEE International Standard -- Systems and software engineering -- Life cycle processes -- Requirements engineering. (2018, November 30). Retrieved from https://standards.ieee.org/standard/29148-2018.html
+\end{document}

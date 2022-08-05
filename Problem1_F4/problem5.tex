@@ -1,0 +1,91 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} 
+\usepackage{fullpage} 
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+
+\usepackage[ruled]{algorithm2e} 
+\renewcommand{\algorithmcfname}{ALGORITHM}
+
+\begin{document}
+
+\noindent
+\large\textbf{PROBLEM 5 } \hfill \textbf{Dhruviben Modi} \\
+\normalsize SOEN 6011 \hfill \textbf{40166396} \\
+ SOFTWARE ENGINEERING PROCESSES \hfill Due Date: August 5, 2022 \\
+\hfill Github address : git@github.com:mdhruvi/SOEN-6011-project.git
+\section{Unit test cases}
+
+\subsection{Test Case 1}
+\begin{itemize}
+    \item \textbf{ID} : TC1
+    \item \textbf{Requirement ID} : FR1, FR2, FR4
+    \item \textbf{Name of Test Case} : testGammafunctionforPositiveInteger()
+    \item \textbf{Test Priority} : High
+    \item \textbf{Pre-condition} : Start the programme, then type a value into the console.
+    \item \textbf{Test Data} : 142, 234
+    \item \textbf{Expected Outcome} : 1.8981437590761713E243, $\infty$
+    \item \textbf{Actual Outcome} : 1.8981437590761713E243, $\infty$
+    \item \textbf{Test Result} : Success
+\end{itemize}
+
+\subsection{Test Case 2}
+\begin{itemize}
+    \item \textbf{ID} : TC2
+    \item \textbf{Requirement ID} : FR2, FR5
+    \item \textbf{Name of Test Case} : testGammafunctionforDecimalNumber()
+    \item \textbf{Test Priority} : High
+    \item \textbf{Pre-condition} : Start the programme, then type a value into the console.
+    \item \textbf{Test Data} : 21.14
+    \item \textbf{Expected Outcome} : 3.699869886541974E18
+    \item \textbf{Actual Outcome} : 3.699869886541974E18
+    \item \textbf{Test Result} : Success
+\end{itemize}
+
+\subsection{Test Case 3}
+\begin{itemize}
+    \item \textbf{ID} : TC3
+    \item \textbf{Requirement ID} : FR3
+    \item \textbf{Name of Test Case} : testGammafunctionforPositiveInteger()
+    \item \textbf{Test Priority} : High
+    \item \textbf{Pre-condition} : Start the programme, then type a value into the console.
+    \item \textbf{Test Data} : 0, -12
+    \item \textbf{Expected Outcome} : Exception, Exception
+    \item \textbf{Actual Outcome} : Exception, Exception
+    \item \textbf{Test Result} : Success
+\end{itemize}
+
+\subsection{Test Case 4}
+\begin{itemize}
+    \item \textbf{ID} : TC4
+    \item \textbf{Requirement ID} : FR3
+    \item \textbf{Name of Test Case} : testPositiveLimitForGammaFunction()
+    \item \textbf{Test Priority} : Medium
+    \item \textbf{Pre-condition} : Start the programme, then type a value into the console.
+    \item \textbf{Test Data} : 175
+    \item \textbf{Expected Outcome} : $+\infty$
+    \item \textbf{Actual Outcome} : Exception, Exception
+    \item \textbf{Test Result} : Success
+\end{itemize}
+
+\subsection{Test Case 5}
+\begin{itemize}
+    \item \textbf{ID} : TC5
+    \item \textbf{Requirement ID} : FR1
+    \item \textbf{Name of Test Case} : testMainmethod()
+    \item \textbf{Test Priority} : High
+    \item \textbf{Pre-condition} : Start the programme, then type a value into the console.
+    \item \textbf{Test Data} : 9 y ghjk 0 -4 200 67 y 150 0
+    \item \textbf{Expected Outcome} : 40320.0, Exception, Exception, Error message, Error message, $\infty$, 5.443449390774432E92, Exception, 3.8089226376305687E260, Error message
+    \item \textbf{Actual Outcome} : 40320.0, Exception, Exception, Error message, Error message, $\infty$, 5.443449390774432E92, Exception, 3.8089226376305687E260, Error message
+    \item \textbf{Test Result} : Success
+\end{itemize}
+
+
+\subsection{Conclusion}
+The Junit testing with the Junit 5 standard is used to test the Gamma Function programme. The running result and the expected outcome are compared using a series of "assertion" methods to determine whether all test cases either succeed or fail.
+
+
+\end{document}
